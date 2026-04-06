@@ -1,4 +1,4 @@
-# 🌤 Skyweaver Weather App
+# 🌤 trendingweather Weather App
 
 **Live Demo:** [https://trendingweather.netlify.app/](https://trendingweather.netlify.app/)
 
