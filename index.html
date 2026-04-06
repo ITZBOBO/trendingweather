@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="app">
+    <div class="card" id="weatherCard">
+
+      <div class="search-area">
+        <div class="title-row">
+          <h1 class="app-title">🌤 WeatherNow</h1>
+          <button id="unitToggle" class="unit-toggle" title="Toggle °C / °F">°C / °F</button>
+        </div>
+        <div class="search-box">
+          <input type="text" id="cityInput" placeholder="Enter city name..." />
+          <button id="searchBtn" title="Search"><i class="fas fa-search"></i></button>
+        </div>
+        <p class="error-msg" id="errorMsg"></p>
+      </div>
+
+      <div class="weather-info hidden" id="weatherInfo">
+        <div class="location-row">
+          <h2 id="cityName">Lagos</h2>
+          <span id="countryCode">NG</span>
+        </div>
+        <p class="date" id="dateText"></p>
+
+        <div class="main-weather">
+          <img id="weatherIcon" src="" alt="weather icon" />
+          <div class="temp-block">
+            <h1 id="temperature">--°C</h1>
+            <p id="weatherDesc">--</p>
+          </div>
+        </div>
+
+        <div class="details-grid">
+          <div class="detail-box">
+            <i class="fas fa-wind"></i>
+            <p class="detail-value" id="windSpeed">--</p>
+            <p class="detail-label">Wind (m/s)</p>
+          </div>
+          <div class="detail-box">
+            <i class="fas fa-tint"></i>
+            <p class="detail-value" id="humidity">--</p>
+            <p class="detail-label">Humidity</p>
+          </div>
+          <div class="detail-box">
+            <i class="fas fa-eye"></i>
+            <p class="detail-value" id="visibility">--</p>
+            <p class="detail-label">Visibility</p>
+          </div>
+          <div class="detail-box">
+            <i class="fas fa-thermometer-half"></i>
+            <p class="detail-value" id="feelsLike">--</p>
+            <p class="detail-label">Feels Like</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="loader hidden" id="loader">
+        <div class="spinner"></div>
+        <p>Fetching weather...</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
